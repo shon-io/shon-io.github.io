@@ -45,6 +45,10 @@ pre {
   src: url('webfonts/MonaspaceXenon-Regular.woff');
 }
 
+.byline {
+  text-transform: lowercase;
+}
+
 .page {
   font-family: 'Monaspace Xenon', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 50%;

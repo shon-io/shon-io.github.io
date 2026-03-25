@@ -1,9 +1,9 @@
 ---
 title: DevOps Isn't an Ops Problem
-date: 2024-09-15
+author: Shon Frazier
+date: 15 Sep 2024
+Topic: DevOps Culture & Team Dynamics
 ---
-
-**Topic:** DevOps Culture & Team Dynamics
 
 ---
 
