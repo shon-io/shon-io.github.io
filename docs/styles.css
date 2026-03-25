@@ -3,6 +3,10 @@ p, ul {
   font-size: larger;
 }
 
+li {
+  margin-block: 0.4em;
+}
+
 a {
   color: black;
   text-decoration: underline;
