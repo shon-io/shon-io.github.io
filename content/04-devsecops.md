@@ -1,5 +1,5 @@
 ---
-title: Security at the End Is Security Theater.
+title: Security at the End Is Security Theater
 author: Shon Frazier
 date: 7 Mar 2025
 Topic: DevSecOps
