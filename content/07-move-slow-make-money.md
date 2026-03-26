@@ -1,7 +1,7 @@
 ---
 title: Move Slow, Make Money
 author: Shon Frazier
-date: TBD
+date: 24 Jan 2026
 Topic: Software Engineering
 ---
 
