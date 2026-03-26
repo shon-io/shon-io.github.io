@@ -1,10 +1,8 @@
 #!/opt/local/bin/fish
 
 for A in content/*.md
-         set DIR (dirname $A)
-         set BASE (basename -s .md $A)
-         echo DIR: $DIR
-         echo BASE: $BASE
+    echo Rendering $A
+    set BASE (basename -s .md $A)
 
-         pandoc $A -o docs/blog/$BASE.html --standalone --template content/template.html
-     end
+    pandoc $A -o docs/blog/$BASE.html --standalone --template content/template.html
+end
