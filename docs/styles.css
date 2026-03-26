@@ -53,6 +53,11 @@ pre {
   text-transform: lowercase;
 }
 
+.summary {
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
 .page {
   font-family: 'Monaspace Xenon', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   width: 50%;
