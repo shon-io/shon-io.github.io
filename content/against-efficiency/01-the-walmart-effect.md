@@ -1,6 +1,10 @@
-# The Walmart Effect, Everywhere
-
-*Against Efficiency — Post 1*
+---
+title: The Walmart Effect, *Everywhere*
+author: Shon Frazier
+date: Friday, April 24, 2026
+tags: local economy, consolidation,
+serial: a1e1
+---
 
 ---
 

@@ -1,0 +1,295 @@
+/* ============================================================
+   Against Efficiency — Gruvbox Blog Stylesheet
+   Supports .dark and .light mode classes on a root wrapper.
+   Usage: <div class="dark"> ... </div>
+          <div class="light"> ... </div>
+   ============================================================ */
+
+/* --- Gruvbox Palette Reference ---
+   Dark bg:        #282828  (bg)
+   Dark bg soft:   #32302f  (bg_s)
+   Dark bg1:       #3c3836  (bg1)
+   Dark bg2:       #504945  (bg2)
+   Dark fg:        #ebdbb2  (fg)
+   Dark fg2:       #d5c4a1  (fg2)
+   Dark fg3:       #bdae93  (fg3)
+   Dark fg4:       #a89984  (fg4 / gray)
+
+   Light bg:       #fbf1c7  (bg)
+   Light bg soft:  #f2e5bc  (bg_s)
+   Light bg1:      #ebdbb2  (bg1)
+   Light bg2:      #d5c4a1  (bg2)
+   Light fg:       #3c3836  (fg)
+   Light fg2:      #504945  (fg2)
+   Light fg3:      #665c54  (fg3)
+   Light fg4:      #7c6f64  (fg4)
+
+   Accents (shared):
+   Yellow:         #d79921  (normal) / #fabd2f (bright)
+   Orange:         #d65d0e  (normal) / #fe8019 (bright)
+   Orange dark:    #af3a03  (dark, for light mode text)
+   Red:            #cc241d  (normal) / #fb4934 (bright)
+   Green:          #98971a  (normal) / #b8bb26 (bright)
+   Green dark:     #427b58  (dark, for light mode text)
+   Teal/green2:    #8ec07c  (bright, for dark mode text)
+   Aqua:           #689d6a  (normal) / #8ec07c (bright)
+   Blue:           #458588  (normal) / #83a598 (bright)
+   Blue dark:      #076678  (dark, for light mode text)
+   Purple:         #b16286  (normal) / #d3869b (bright)
+   Brown/orange2:  #b57614  (dark yellow, for light mode borders)
+   ============================================================ */
+
+
+/* ============================================================
+   TOGGLE BUTTON
+   ============================================================ */
+
+.gb-toggle {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.dark .gb-toggle  { border: 1px solid #504945; }
+.light .gb-toggle { border: 1px solid #d5c4a1; }
+
+.gb-toggle button {
+  padding: 7px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-family: system-ui, sans-serif;
+}
+
+.dark  .gb-btn-dark  { background: #d79921; color: #282828; }
+.dark  .gb-btn-light { background: #3c3836; color: #a89984; }
+.light .gb-btn-light { background: #d79921; color: #fbf1c7; }
+.light .gb-btn-dark  { background: #f2e5bc; color: #a89984; }
+
+
+/* ============================================================
+   OUTER WRAPPER
+   ============================================================ */
+
+.gb-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark  .gb-wrap { background: #282828; border: 1px solid #504945; }
+.light .gb-wrap { background: #fbf1c7; border: 1px solid #d5c4a1; }
+
+
+/* ============================================================
+   INNER CONTENT PADDING
+   ============================================================ */
+
+.gb-inner {
+  padding: 2.5rem;
+}
+
+.dark  .gb-inner { background: #282828; }
+.light .gb-inner { background: #fbf1c7; }
+
+
+/* ============================================================
+   KICKER / EYEBROW BADGE
+   ============================================================ */
+
+.gb-kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin-bottom: 1.1rem;
+  font-family: system-ui, sans-serif;
+}
+
+.dark  .gb-kicker { color: #282828; background: #d79921; }
+.light .gb-kicker { color: #fbf1c7; background: #af3a03; }
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.gb-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.01em;
+}
+
+.dark  .gb-title    { color: #ebdbb2; }
+.light .gb-title    { color: #3c3836; }
+
+.dark  .gb-title em { color: #d65d0e; font-style: italic; }
+.light .gb-title em { color: #af3a03; font-style: italic; }
+
+
+/* ============================================================
+   HORIZONTAL RULE
+   ============================================================ */
+
+.gb-rule {
+  border: none;
+  margin: 1rem 0;
+}
+
+.dark  .gb-rule { border-top: 1px solid #504945; }
+.light .gb-rule { border-top: 1px solid #d5c4a1; }
+
+
+/* ============================================================
+   META LINE (author, read time)
+   ============================================================ */
+
+.gb-meta {
+  font-size: 12px;
+  margin-bottom: 1.4rem;
+  font-family: system-ui, sans-serif;
+}
+
+.dark  .gb-meta { color: #a89984; }
+.light .gb-meta { color: #7c6f64; }
+
+
+/* ============================================================
+   TAGS / CATEGORY PILLS
+   ============================================================ */
+
+.gb-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin-right: 6px;
+  font-family: system-ui, sans-serif;
+}
+
+.dark  .gb-tag { background: #3c3836; color: #8ec07c; }
+.light .gb-tag { background: #f2e5bc; color: #427b58; }
+
+
+/* ============================================================
+   LEDE / OPENING PARAGRAPH
+   ============================================================ */
+
+.gb-lede {
+  font-size: 1.05rem;
+  line-height: 1.78;
+  margin-bottom: 1.1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  border-left: 3px solid #d79921;
+  padding-left: 1rem;
+}
+
+.dark  .gb-lede { color: #ebdbb2; }
+.light .gb-lede { color: #3c3836; }
+
+
+/* ============================================================
+   BODY TEXT
+   ============================================================ */
+
+.gb-body {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.dark  .gb-body { color: #bdae93; }
+.light .gb-body { color: #504945; }
+
+
+/* ============================================================
+   PULL QUOTE
+   ============================================================ */
+
+.gb-pull {
+  font-size: 1.05rem;
+  font-style: italic;
+  padding: 0.9rem 0;
+  margin: 1.25rem 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.dark  .gb-pull       { color: #ebdbb2; border-top: 1px solid #d79921; border-bottom: 1px solid #504945; }
+.light .gb-pull       { color: #3c3836; border-top: 1px solid #b57614; border-bottom: 1px solid #d5c4a1; }
+
+.dark  .gb-pull span  { color: #d65d0e; }
+.light .gb-pull span  { color: #af3a03; }
+
+
+/* ============================================================
+   STAT / CALLOUT BOX
+   ============================================================ */
+
+.gb-stat {
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+  font-family: system-ui, sans-serif;
+  font-weight: 500;
+  border-left: 3px solid #d79921;
+}
+
+.dark  .gb-stat { background: #3c3836; color: #fabd2f; }
+.light .gb-stat { background: #f2e5bc; color: #b57614; }
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.gb-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  font-size: 12px;
+  font-family: system-ui, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark  .gb-footer   { border-top: 1px solid #504945; color: #7c6f64; }
+.light .gb-footer   { border-top: 1px solid #d5c4a1; color: #a89984; }
+
+.dark  .gb-footer a { color: #83a598; text-decoration: none; }
+.light .gb-footer a { color: #076678; text-decoration: none; }
+
+.gb-footer a:hover  { text-decoration: underline; }
+
+
+/* ============================================================
+   UTILITY: MODE TRANSITION
+   ============================================================ */
+
+.gb-wrap,
+.gb-inner,
+.gb-title,
+.gb-lede,
+.gb-body,
+.gb-pull,
+.gb-stat,
+.gb-meta,
+.gb-footer {
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+</style>
