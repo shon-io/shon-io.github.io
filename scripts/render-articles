@@ -1,8 +1,9 @@
 #!/opt/local/bin/fish
 
-for A in content/*.md
+for A in (find content -iname \*.md)
     echo Rendering $A
     set BASE (basename -s .md $A)
+    set DIR (dirname $A | sed 's/content//')
 
-    pandoc $A -o docs/blog/$BASE.html --standalone --template content/template.html
+    pandoc $A -o docs/blog/$DIR/$BASE.html --standalone --template content/template.html
 end
