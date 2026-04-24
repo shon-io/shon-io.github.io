@@ -1,9 +1,17 @@
 #!/opt/local/bin/fish
 
+set DEFAULT_TEMPLATE content/template.html
+
 for A in (find content -iname \*.md)
     echo Rendering $A
     set BASE (basename -s .md $A)
     set DIR (dirname $A | sed 's/content//')
 
-    pandoc $A -o docs/blog/$DIR/$BASE.html --standalone --template content/template.html
+    if test -f content/$DIR/template.html
+        set TEMPLATE content/$DIR/template.html
+    else
+        set TEMPLATE $DEFAULT_TEMPLATE
+    end
+
+    pandoc $A -o docs/blog/$DIR/$BASE.html --standalone --template $TEMPLATE
 end
