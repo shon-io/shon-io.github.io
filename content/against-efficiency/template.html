@@ -5,22 +5,33 @@
   <meta charset="utf-8" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Against Efficiency - $title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Against Efficiency — $title$</title>
 </head>
 
 <body>
-  <div style="display: contents">
-    <div class="page">
-      <h3>Against Efficiency</h3>
+  <div id="root" class="dark">
+
+    <header class="site-header">
+      <span class="site-title">Against Efficiency</span>
+    </header>
+
+    <main class="page">
       <article>
-        <h1>$title$</h1>
-        <span class="byline">$author$ - $date$</span>
-        $body$
-        <span class="signoff">—shon</span>
-    </div>
+        <h1 class="gb-title">$title$</h1>
+        <span class="gb-kicker">$for(tags)$ $tags$$sep$ ·$endfor$</span>
+        <span class="byline">$author$ · $date$</span>
+        <div class="article-body">
+          $body$
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span class="copyright">Copyright $author$</span>
+    </footer>
+
   </div>
-  <p class="copyright">Copyright Shon Frazier</p>
 </body>
 
 </html>

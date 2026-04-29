@@ -2,7 +2,9 @@
 title: The Walmart Effect, *Everywhere*
 author: Shon Frazier
 date: Friday, April 24, 2026
-tags: local economy, consolidation,
+tags: 
+    - local economy
+    - consolidation
 serial: a1e1
 ---
 
@@ -16,7 +18,7 @@ name, and had a stake in whether you came back.
 Think hard. It might have been longer ago than you'd like to admit.
 
 That's no accident. It's the predictable, measurable, documented result of forty years of economic policy, corporate
-strategy, and consumer behavior that prioritized one thing above all others: efficiency. Lower prices. Faster delivery.
+strategy, and consumer behavior that prioritized one thing above all: efficiency. Lower prices. Faster delivery.
 Frictionless transactions. And in pursuit of that efficiency, we traded away something we didn't know we were selling:
 the local economic fabric that held communities together, kept wealth circulating close to home, and gave individuals —
 merchants, farmers, makers, and just plain people — a fighting chance.
@@ -124,6 +126,8 @@ This isn't nostalgia for a past that wasn't as good as we remember, but an argum
 one we're currently building.
 
 We've been replaced. That doesn't mean we have to stay replaced.
+
+-*-shon*
 
 ---
 

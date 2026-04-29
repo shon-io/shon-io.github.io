@@ -1,108 +1,110 @@
 /* ============================================================
-   Against Efficiency — Gruvbox Blog Stylesheet
-   Supports .dark and .light mode classes on a root wrapper.
-   Usage: <div class="dark"> ... </div>
-          <div class="light"> ... </div>
+   Against Efficiency — styles.css
+   Gruvbox dark/light theme.
    ============================================================ */
 
 /* --- Gruvbox Palette Reference ---
-   Dark bg:        #282828  (bg)
-   Dark bg soft:   #32302f  (bg_s)
-   Dark bg1:       #3c3836  (bg1)
-   Dark bg2:       #504945  (bg2)
-   Dark fg:        #ebdbb2  (fg)
-   Dark fg2:       #d5c4a1  (fg2)
-   Dark fg3:       #bdae93  (fg3)
-   Dark fg4:       #a89984  (fg4 / gray)
+   Dark bg:        #282828
+   Dark bg1:       #3c3836
+   Dark bg2:       #504945
+   Dark fg:        #ebdbb2
+   Dark fg3:       #bdae93
+   Dark fg4:       #a89984
+   Dark fg5:       #7c6f64
 
-   Light bg:       #fbf1c7  (bg)
-   Light bg soft:  #f2e5bc  (bg_s)
-   Light bg1:      #ebdbb2  (bg1)
-   Light bg2:      #d5c4a1  (bg2)
-   Light fg:       #3c3836  (fg)
-   Light fg2:      #504945  (fg2)
-   Light fg3:      #665c54  (fg3)
-   Light fg4:      #7c6f64  (fg4)
+   Light bg:       #fbf1c7
+   Light bg_s:     #f2e5bc
+   Light bg2:      #d5c4a1
+   Light fg:       #3c3836
+   Light fg2:      #504945
+   Light fg4:      #7c6f64
+   Light fg5:      #a89984
 
-   Accents (shared):
-   Yellow:         #d79921  (normal) / #fabd2f (bright)
-   Orange:         #d65d0e  (normal) / #fe8019 (bright)
-   Orange dark:    #af3a03  (dark, for light mode text)
-   Red:            #cc241d  (normal) / #fb4934 (bright)
-   Green:          #98971a  (normal) / #b8bb26 (bright)
-   Green dark:     #427b58  (dark, for light mode text)
-   Teal/green2:    #8ec07c  (bright, for dark mode text)
-   Aqua:           #689d6a  (normal) / #8ec07c (bright)
-   Blue:           #458588  (normal) / #83a598 (bright)
-   Blue dark:      #076678  (dark, for light mode text)
-   Purple:         #b16286  (normal) / #d3869b (bright)
-   Brown/orange2:  #b57614  (dark yellow, for light mode borders)
+   Yellow:         #d79921 / bright #fabd2f
+   Orange:         #d65d0e / dark   #af3a03
+   Brown/gold:     #b57614
+   Teal:           #8ec07c (dark mode text)
+   Teal dark:      #427b58 (light mode text)
+   Blue:           #83a598 (dark) / #076678 (light)
    ============================================================ */
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-/* ============================================================
-   TOGGLE BUTTON
-   ============================================================ */
+html {
+  font-size: 16px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s, color 0.3s;
+}
+
+#root { background: #fbf1c7; color: #3c3836; }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.site-header { border-color: #d5c4a1; background: #fbf1c7; }
+
+.site-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  transition: color 0.3s;
+}
+
+.site-title { color: #3c3836; }
 
 .gb-toggle {
   display: flex;
-  gap: 0;
-  margin-bottom: 1.5rem;
   border-radius: 6px;
   overflow: hidden;
-  width: fit-content;
+  transition: border-color 0.3s;
 }
 
-.dark .gb-toggle  { border: 1px solid #504945; }
-.light .gb-toggle { border: 1px solid #d5c4a1; }
+.gb-toggle { border: 1px solid #d5c4a1; }
 
 .gb-toggle button {
-  padding: 7px 20px;
-  font-size: 12px;
+  padding: 5px 16px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
-.dark  .gb-btn-dark  { background: #d79921; color: #282828; }
-.dark  .gb-btn-light { background: #3c3836; color: #a89984; }
-.light .gb-btn-light { background: #d79921; color: #fbf1c7; }
-.light .gb-btn-dark  { background: #f2e5bc; color: #a89984; }
+.gb-btn-light { background: #d79921; color: #fbf1c7; }
+.gb-btn-dark  { background: #f2e5bc; color: #a89984; }
 
-
-/* ============================================================
-   OUTER WRAPPER
-   ============================================================ */
-
-.gb-wrap {
-  border-radius: 8px;
-  overflow: hidden;
-  transition: background 0.3s, color 0.3s;
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
 }
 
-.dark  .gb-wrap { background: #282828; border: 1px solid #504945; }
-.light .gb-wrap { background: #fbf1c7; border: 1px solid #d5c4a1; }
-
-
-/* ============================================================
-   INNER CONTENT PADDING
-   ============================================================ */
-
-.gb-inner {
-  padding: 2.5rem;
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
-
-.dark  .gb-inner { background: #282828; }
-.light .gb-inner { background: #fbf1c7; }
-
-
-/* ============================================================
-   KICKER / EYEBROW BADGE
-   ============================================================ */
 
 .gb-kicker {
   font-size: 10px;
@@ -112,184 +114,186 @@
   display: inline-block;
   padding: 3px 10px;
   border-radius: 3px;
-  margin-bottom: 1.1rem;
-  font-family: system-ui, sans-serif;
+  margin-bottom: 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  align-self: flex-start;
+  transition: background 0.3s, color 0.3s;
 }
 
-.dark  .gb-kicker { color: #282828; background: #d79921; }
-.light .gb-kicker { color: #fbf1c7; background: #af3a03; }
+.gb-kicker { color: #fbf1c7; background: #af3a03; }
 
-
-/* ============================================================
-   TITLE
-   ============================================================ */
-
-.gb-title {
-  font-size: 1.9rem;
+.gb-title,
+.article h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 0.4rem;
-  font-family: Georgia, 'Times New Roman', serif;
   letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+  transition: color 0.3s;
 }
 
-.dark  .gb-title    { color: #ebdbb2; }
-.light .gb-title    { color: #3c3836; }
+.article h1 { color: #3c3836; }
 
-.dark  .gb-title em { color: #d65d0e; font-style: italic; }
-.light .gb-title em { color: #af3a03; font-style: italic; }
+.article h1 em { color: #af3a03; font-style: italic; }
 
-
-/* ============================================================
-   HORIZONTAL RULE
-   ============================================================ */
-
-.gb-rule {
+.gb-rule,
+.article hr {
   border: none;
   margin: 1rem 0;
+  transition: border-color 0.3s;
 }
 
-.dark  .gb-rule { border-top: 1px solid #504945; }
-.light .gb-rule { border-top: 1px solid #d5c4a1; }
+.gb-rule,
+.article hr { border-top: 1px solid #d5c4a1; }
 
-
-/* ============================================================
-   META LINE (author, read time)
-   ============================================================ */
-
-.gb-meta {
+.byline {
+  display: block;
   font-size: 12px;
-  margin-bottom: 1.4rem;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  margin-bottom: 2rem;
+  transition: color 0.3s;
 }
 
-.dark  .gb-meta { color: #a89984; }
-.light .gb-meta { color: #7c6f64; }
+.byline { color: #7c6f64; }
 
-
-/* ============================================================
-   TAGS / CATEGORY PILLS
-   ============================================================ */
-
-.gb-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  border-radius: 3px;
-  padding: 2px 8px;
-  margin-right: 6px;
-  font-family: system-ui, sans-serif;
-}
-
-.dark  .gb-tag { background: #3c3836; color: #8ec07c; }
-.light .gb-tag { background: #f2e5bc; color: #427b58; }
-
-
-/* ============================================================
-   LEDE / OPENING PARAGRAPH
-   ============================================================ */
-
-.gb-lede {
-  font-size: 1.05rem;
-  line-height: 1.78;
-  margin-bottom: 1.1rem;
+.article-body {
   font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: color 0.3s;
+}
+
+.article-body { color: #504945; }
+
+.article-body p {
+  margin: 0;
+}
+
+.article-body > p:first-child {
+  font-size: 1.05rem;
   border-left: 3px solid #d79921;
   padding-left: 1rem;
+  transition: color 0.3s;
 }
 
-.dark  .gb-lede { color: #ebdbb2; }
-.light .gb-lede { color: #3c3836; }
+.article-body > p:first-child { color: #3c3836; }
 
-
-/* ============================================================
-   BODY TEXT
-   ============================================================ */
-
-.gb-body {
-  font-size: 0.9rem;
-  line-height: 1.85;
-  margin-bottom: 1.1rem;
+.article-body h2 {
   font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 0.5rem;
+  margin-bottom: -0.25rem;
+  transition: color 0.3s;
 }
 
-.dark  .gb-body { color: #bdae93; }
-.light .gb-body { color: #504945; }
+.article-body h2 { color: #3c3836; }
 
+.article-body h3 {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: -0.25rem;
+  transition: color 0.3s;
+}
 
-/* ============================================================
-   PULL QUOTE
-   ============================================================ */
+.article-body h3 { color: #b57614; }
 
-.gb-pull {
+.article-body hr {
+  border: none;
+  margin: 0.5rem 0;
+  transition: border-color 0.3s;
+}
+
+.article-body hr { border-top: 1px solid #d5c4a1; }
+
+.article-body em     { color: #3c3836; font-style: italic; }
+
+.article-body strong { color: #b57614; font-weight: 600; }
+
+.article-body blockquote {
   font-size: 1.05rem;
   font-style: italic;
-  padding: 0.9rem 0;
-  margin: 1.25rem 0;
-  font-family: Georgia, 'Times New Roman', serif;
+  padding: 0.9rem 0 0.9rem 1rem;
+  margin: 0.25rem 0;
+  border-left: 3px solid #d79921;
+  transition: color 0.3s, border-color 0.3s;
 }
 
-.dark  .gb-pull       { color: #ebdbb2; border-top: 1px solid #d79921; border-bottom: 1px solid #504945; }
-.light .gb-pull       { color: #3c3836; border-top: 1px solid #b57614; border-bottom: 1px solid #d5c4a1; }
+.article-body blockquote { color: #3c3836; }
 
-.dark  .gb-pull span  { color: #d65d0e; }
-.light .gb-pull span  { color: #af3a03; }
+.article-body code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.85em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: background 0.3s, color 0.3s;
+}
 
+.article-body code { background: #f2e5bc; color: #427b58; }
 
-/* ============================================================
-   STAT / CALLOUT BOX
-   ============================================================ */
+.article-body a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
 
-.gb-stat {
+.article-body a { color: #076678; }
+
+.article-body a:hover {
+  text-decoration: none;
+}
+
+.article-body aside,
+.article-body .callout {
   border-radius: 5px;
   padding: 0.75rem 1rem;
-  margin: 1rem 0;
   font-size: 0.88rem;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   font-weight: 500;
   border-left: 3px solid #d79921;
+  transition: background 0.3s, color 0.3s;
 }
 
-.dark  .gb-stat { background: #3c3836; color: #fabd2f; }
-.light .gb-stat { background: #f2e5bc; color: #b57614; }
+.article-body aside,
+.article-body .callout { background: #f2e5bc; color: #b57614; }
 
+/* signoff — paragraph immediately before an hr */
+.article-body _p:has(+ hr) {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #7c6f64;
+}
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* Next line — paragraph immediately after an hr */
+.article-body hr + p {
+  font-size: 0.88rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-style: italic;
+  color: #a89984;
+}
 
-.gb-footer {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
+.site-footer {
+  padding: 1.25rem 2rem;
   font-size: 12px;
-  font-family: system-ui, sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  border-top: 1px solid transparent;
+  transition: color 0.3s, border-color 0.3s, background 0.3s;
 }
 
-.dark  .gb-footer   { border-top: 1px solid #504945; color: #7c6f64; }
-.light .gb-footer   { border-top: 1px solid #d5c4a1; color: #a89984; }
+.site-footer { color: #a89984; border-color: #d5c4a1; background: #fbf1c7; }
 
-.dark  .gb-footer a { color: #83a598; text-decoration: none; }
-.light .gb-footer a { color: #076678; text-decoration: none; }
-
-.gb-footer a:hover  { text-decoration: underline; }
-
-
-/* ============================================================
-   UTILITY: MODE TRANSITION
-   ============================================================ */
-
-.gb-wrap,
-.gb-inner,
-.gb-title,
-.gb-lede,
-.gb-body,
-.gb-pull,
-.gb-stat,
-.gb-meta,
-.gb-footer {
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+@media (max-width: 600px) {
+  .page { padding: 2rem 1.25rem 3rem; }
+  .site-header { padding: 1rem 1.25rem; }
+  .site-footer { padding: 1rem 1.25rem; }
 }
-</style>
