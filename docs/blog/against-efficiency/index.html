@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Against Efficiency — Why local business, open design, and economic independence are the answer to an economy that's replaced us." />
+  <title>Against Efficiency</title>
+  <style>
+    /* Index-specific styles */
+    .index-hero {
+      padding: 3.5rem 2rem 2.5rem;
+      max-width: 740px;
+      margin: 0 auto;
+      border-bottom: 1px solid #d5c4a1;
+    }
+
+    .index-hero h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2rem, 6vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #3c3836;
+      margin-bottom: 1rem;
+    }
+
+    .index-hero h1 em {
+      color: #af3a03;
+      font-style: italic;
+    }
+
+    .index-hero .subtitle {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #504945;
+      max-width: 560px;
+      margin-bottom: 1.5rem;
+    }
+
+    .index-hero .subtitle strong {
+      color: #3c3836;
+      font-weight: 600;
+    }
+
+    .index-hero .book-note {
+      font-size: 12px;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #a89984;
+      font-style: italic;
+    }
+
+    .index-hero .book-note span {
+      color: #b57614;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    /* About section */
+    .about-section {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+      border-bottom: 1px solid #d5c4a1;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #a89984;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: #504945;
+      max-width: 600px;
+    }
+
+    .about-section p + p {
+      margin-top: 1rem;
+    }
+
+    .about-section a {
+      color: #076678;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .about-section a:hover {
+      text-decoration: none;
+    }
+
+    /* Posts list */
+    .posts-section {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+    }
+
+    .post-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .post-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #d5c4a1;
+      text-decoration: none;
+    }
+
+    .post-item:first-child {
+      border-top: 1px solid #d5c4a1;
+    }
+
+    .post-item:hover .post-title {
+      color: #af3a03;
+    }
+
+    .post-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #3c3836;
+      line-height: 1.3;
+      transition: color 0.15s;
+    }
+
+    .post-title em {
+      color: #af3a03;
+      font-style: italic;
+    }
+
+    .post-date {
+      font-size: 11px;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #a89984;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .index-hero { padding: 2.5rem 1.25rem 2rem; }
+      .about-section { padding: 2rem 1.25rem; }
+      .posts-section { padding: 2rem 1.25rem 4rem; }
+      .post-item { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="light">
+
+    <header class="site-header">
+      <span class="site-title">Against Efficiency</span>
+    </header>
+
+    <div class="index-hero">
+      <h1>Against<br><em>Efficiency</em></h1>
+      <p class="subtitle">
+        <strong>Why local business, open design, and economic independence</strong>
+        are the answer to an economy that's replaced us.
+      </p>
+      <p class="book-note">A blog series by Shon Frazier</p>
+    </div>
+
+    <div class="about-section">
+      <div class="section-label">About this series</div>
+      <p>For decades, the logic of efficiency has hollowed out local economies, consolidated power into fewer and fewer hands, and replaced people — merchants, farmers, makers, neighbors — with platforms, algorithms, and terms of service. And it's all by design, not an accident.</p>
+      <p>This series makes the case for a different design: local business, open technology, and economic infrastructure that keeps wealth close to home and ownership with the people who earned it. The argument cuts across ideological lines because the problem does, too.</p>
+      <p>Written by <a href="#">Shon Frazier</a>, a software crafter</p>
+    </div>
+
+    <div class="posts-section">
+      <div class="section-label">Posts</div>
+      <ul class="post-list">
+
+        <li>
+          <a class="post-item" href="01-the-walmart-effect.html">
+            <span class="post-title">The Walmart Effect, <em>Everywhere</em></span>
+            <span class="post-date">May 4, 2026</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="02-you-dont-own-that.html">
+            <span class="post-title">You Don't Own That</span>
+            <span class="post-date">May 8, 2026</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">The Platform Tax</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">How We Got Here</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">The Efficiency Trap</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">What We Traded Away</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">The Case for Local</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">Open Design and the Maker Revolution</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">Local Tech, Community Scale</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="post-item" href="#" style="opacity:0.45;pointer-events:none;">
+            <span class="post-title">What You Can Do Monday Morning</span>
+            <span class="post-date">Coming soon</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <footer class="site-footer">
+      <span class="copyright">Copyright Shon Frazier &nbsp;·&nbsp; Against Efficiency</span>
+    </footer>
+
+  </div>
+</body>
+
+</html>

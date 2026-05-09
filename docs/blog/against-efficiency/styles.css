@@ -275,7 +275,7 @@ html {
 }
 
 /* Next line — paragraph immediately after an hr */
-.article-body hr + p {
+._article-body hr + p {
   font-size: 0.88rem;
   font-family: system-ui, -apple-system, sans-serif;
   font-style: italic;

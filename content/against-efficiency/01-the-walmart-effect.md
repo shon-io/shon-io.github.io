@@ -1,7 +1,7 @@
 ---
 title: The Walmart Effect, *Everywhere*
 author: Shon Frazier
-date: Friday, April 24, 2026
+date: Monday, May 4, 2026
 tags: 
     - local economy
     - consolidation
@@ -50,7 +50,7 @@ feed, and not the price they'll be paid at the end of the season. They bear the 
 Technology has perfected the model. A handful of platforms now intermediate nearly every economic transaction that moves
 through a screen. Want to sell handmade goods? Etsy takes a cut and owns your customer relationship. Want to get your
 restaurant's food to someone across town? DoorDash will do it for thirty percent of every order, plus your customer's
-data, plus the right to advertise your competitors back to your own diners. Want to reach an audience for your writing,
+data, *plus* the right to market to your customers. Want to reach an audience for your writing,
 your music, your craft? The platform decides who sees it, on what terms, and reserves the right to change those terms
 whenever it likes.
 
